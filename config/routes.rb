@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     devise_for :users , controllers: { sessions: :sessions} , path_names: {sign_in: :login}
   end
 
+  resource :user , only:[:show, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
